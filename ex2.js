@@ -13,3 +13,14 @@ if (edad >= 18) {
 console.log(puedesPasar) // false
 
 // PREGUNTA: ¿Por qué no se actualiza correctamente la variable 'puedesPasar'?
+
+//primero no entra al if porque edad no es as grande o igual a 18 y porque la variable puedesPasar se declara dos veces, fuera y dentro del if
+
+let puedesPasar2 = true;
+edad = 18;
+
+if (edad >= 18) {
+     puedesPasar2 = false;
+}
+
+console.log(puedesPasar2) // false

@@ -9,8 +9,8 @@ let paciente = {
 }
 
 // A) COPIA el paciente usando el operador de spread a un NUEVO objeto de nombre 'pacienteCopiado'; pero añade una nueva propiedad que se diga 'localidad'; y asignale cualquier valor
-
-// console.log(pacienteCopiado) ;
+let pacienteCopiado = {...paciente,"localidad":"Barcelona"} ;
+ console.log(pacienteCopiado) ;
 /**
  * {
     nombre: "Pedro",
@@ -20,7 +20,7 @@ let paciente = {
 }
  */
 
-// console.log(paciente == pacienteCopiado); // false 
+console.log(paciente == pacienteCopiado); // false 
 // IMPORTANTE^ : Los objetos deben estar en diferentes posiciones de memoria, la comparación debe dar false
 
 let pacientes = [{
@@ -34,8 +34,12 @@ let pacientes = [{
 }];
 
 // B) COPIA el array de pacientes Y AÑADE un nuevo paciente. USa el operador de 'spread' para realizar la copia, NO HAGAS PUSH. Guarda el array nuevo en una variable de nombre 'pacientesActualizados'
-
-// console.log(pacientesActualizados)
+let pacientesActualizados = [...pacientes,{
+    nombre: "Olivia",
+    ultimaVisitaPagada: false,
+    ultimaVisita: '1/4/2021 18: 32: 19'
+}]
+console.log(pacientesActualizados)
 
 /**
  * let pacientes = [{
@@ -53,4 +57,4 @@ let pacientes = [{
 }];
  */
 
-// console.log(pacientes == pacientesActualizados); // false
+console.log(pacientes == pacientesActualizados); // false
